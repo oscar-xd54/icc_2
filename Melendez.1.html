@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Currículum Vitae</title>
+</head>
+<link rel="stylesheet" href="style/style.css">
+<script>
+    function sumarNumeros() {
+        // Obtener los valores ingresados por el usuario
+        const num1 = parseFloat(document.getElementById("numero1").value);
+        const num2 = parseFloat(document.getElementById("numero2").value);
+        // Calcular la suma
+        const resultado = num1 + num2;
+        // Mostrar el resultado
+        document.getElementById("resultado").innerText = "Resultado: " + resultado;
+    }
+
+    function restarNumeros() {
+        const num1 = parseFloat(document.getElementById("numero3").value);
+        const num2 = parseFloat(document.getElementById("numero4").value);
+
+        const resultado = num3 - num4;
+
+        document.getElementById("resultado").innerText = "Resultado: " + resultado;
+    }
+
+    function multiplicarNumeros() {
+        const num1 = parseFloat(document.getElementById("numero5").value);
+        const num2 = parseFloat(document.getElementById("numero6").value);
+
+        const resultado = num5 * num6;
+
+        document.getElementById("resultado").innerText = "Resultado: " + resultado;
+    }
+
+    function dividirNumeros() {
+        const num1 = parseFloat(document.getElementById("numero7").value);
+        const num2 = parseFloat(document.getElementById("numero8").value);
+
+        if (num2 === 0) {
+            document.getElementById("resultado").innerText = "Error: no se puede dividir entre 0";
+            return;
+        }
+
+        const resultado = num7 / num8;
+
+        document.getElementById("resultado").innerText = "Resultado: " + resultado;
+    }
+
+
+
+</script>
+</head>
+
+<body>
+    <div id="header">
+        <div id="profile-pic">
+            <img src="Oscar.jpg.jpeg" alt="Foto de Perfil">
+        </div>
+        <div id="name">
+            <h1>Nombre Apellido</h1>
+        </div>
+        <div id="contact-info">
+            <p><strong>Correo electrónico:</strong> eposada@santacecilia.edu.sv.com</p>
+            <p><strong>Teléfono:</strong> +503 7868-7868</p>
+            <p><strong>Sitio web:</strong> especialidadinformatica.com</p>
+        </div>
+    </div>
+    <!-- Sección para sumar números -->
+    <h2>Calculadora de Suma</h2>
+    Número 1: <input type="text" id="n1"><br>
+    Número 2: <input type="text" id="n2"><br>
+    <button onclick="sumar()">Sumar</button>
+    <p>Resultado: <span id="resSuma"></span></p>
+
+    <h2>Calculadora de Resta</h2>
+    Número 3: <input type="text" id="n3"><br>
+    Número 4: <input type="text" id="n4"><br>
+    <button onclick="restar()">Restar</button>
+    <p>Resultado: <span id="resResta"></span></p>
+
+    <h2>Calculadora de Multiplicación</h2>
+    Número 5: <input type="text" id="n5"><br>
+    Número 6: <input type="text" id="n6"><br>
+    <button onclick="multiplicar()">Multiplicar</button>
+    <p>Resultado: <span id="resMulti"></span></p>
+
+    <h2>Calculadora de División</h2>
+    Número 7: <input type="text" id="n7"><br>
+    Número 8: <input type="text" id="n8"><br>
+    <button onclick="dividir()">Dividir</button>
+    <p>Resultado: <span id="resDiv"></span></p>
+
+    <script>
+        function sumar() {
+            let a = parseFloat(document.getElementById("n1").value);
+            let b = parseFloat(document.getElementById("n2").value);
+            document.getElementById("resSuma").textContent = a + b;
+        }
+
+        function restar() {
+            let a = parseFloat(document.getElementById("n3").value);
+            let b = parseFloat(document.getElementById("n4").value);
+            document.getElementById("resResta").textContent = a - b;
+        }
+
+        function multiplicar() {
+            let a = parseFloat(document.getElementById("n5").value);
+            let b = parseFloat(document.getElementById("n6").value);
+            document.getElementById("resMulti").textContent = a * b;
+        }
+
+        function dividir() {
+            let a = parseFloat(document.getElementById("n7").value);
+            let b = parseFloat(document.getElementById("n8").value);
+
+            if (b === 0) {
+                document.getElementById("resDiv").textContent = "No se puede dividir entre 0";
+            } else {
+                document.getElementById("resDiv").textContent = a / b;
+            }
+        }
+    </script>
+    </div>
+
+    <body>
+        <div id="header">
+            <div id="profile-pic">
+                <img src="Oscar.jpg.jpeg" alt="Foto de perfil" width="300">
+            </div>
+            <div id="name">
+                <h1>Nombre Apellido</h1>
+            </div>
+            <div id="contact-info">
+                <p><strong>Correo electrónico:</strong> oscarsmelendez2009@gmail.com</p>
+                <p><strong>Teléfono:</strong> +503 7339 7954</p>
+                <p><strong>Sitio web:</strong> fortnite.com</p>
+            </div>
+        </div>
+        <div id="profile">
+            <h2>Perfil Profesional</h2>
+            <p>Breve descripción de tu perfil profesional, áreas de experiencia, etc.</p>
+        </div>
+        <div id="experience">
+            <h2>Experiencia Laboral</h2>
+            <div class="job">
+                <h3>Puesto 1</h3>
+                <p><strong>Empresa:</strong> Nombre de la empresa</p>
+                <p><strong>Fechas:</strong> Desde - Hasta</p>
+                <p><strong>Descripción:</strong> Descripción de tus funciones y logros.</p>
+            </div>
+            <div class="job">
+                <h3>Puesto 2</h3>
+                <p><strong>Empresa:</strong> Nombre de la empresa</p>
+                <p><strong>Fechas:</strong> Desde - Hasta</p>
+                <p><strong>Descripción:</strong> Descripción de tus funciones y logros.</p>
+            </div>
+        </div>
+        <!-- ... Resto del código ... -->
+    </body>
+
+</html>
